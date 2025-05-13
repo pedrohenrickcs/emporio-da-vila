@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #F4EBD0;
+    --foreground: #3B2F2F;
+    --cor-primary-color: #E98C3D;
+    --cor-secondary-color: #3B2F2F;
+    --cor-green: #A2C8B4;
+    --cor-turquesa: #9FD9D2;
+
+    /* Fonts */
+    --font-title: var(--font-comfortaa);
+    --font-body: var(--font-poppins);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #F4EBD0;
+        --foreground: #3B2F2F;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body), sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-title), cursive;
+    color: var(--cor-primary-color);
+}
+
+a {
+    color: var(--cor-primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-family: var(--font-body), sans-serif;
+    cursor: pointer;
 }
