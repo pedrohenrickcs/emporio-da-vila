@@ -26,4 +26,22 @@ export const categoriesMock = [
     description: "",
     available: true,
   },
+  {
+    id: "laticinios",
+    name: "Laticinios",
+    price: 0.9,
+    count: 32,
+    image: "#",
+    description: "laticinios.",
+    available: true,
+  },
+  {
+    id: "higiene",
+    name: "Higiene",
+    price: 0.8,
+    count: 15,
+    image: "#",
+    description: "",
+    available: true,
+  },
 ];

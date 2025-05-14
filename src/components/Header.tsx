@@ -3,13 +3,11 @@ import Image from 'next/image';
 export default function Header() {
     return (
         <header className="border-b shadow-sm">
-            {/* Topo: Logo, Busca, Ações */}
             <div className="flex items-center justify-between px-4 py-3 bg-white">
                 <div className="flex-shrink-0">
                     <Image src="/logo.webp" alt="Emporio da Vila" width={120} height={30} className="h-30" />
                 </div>
 
-                {/* Busca */}
                 <div className="flex-1 max-w-xl mx-4">
                     <input
                         type="text"
@@ -25,7 +23,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <nav className="bg-green-600 text-white text-sm">
+            <nav className="text-white text-sm bg-primary">
                 <ul className="flex justify-center space-x-8 py-2">
                     <li className="hover:underline cursor-pointer">Início</li>
                     <li className="hover:underline cursor-pointer">Sobre</li>

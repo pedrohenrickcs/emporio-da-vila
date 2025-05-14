@@ -1,22 +1,16 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        brand: {
-          "primary-color": "#f97316",
-          "secondary-color": "#fde68a",
-          "tertiary-color": "#fef3c7",
-          green: "#22c55e",
-          turquoise: "#14b8a6",
-          background: "#ffffff",
-          foreground: "#000000",
-        },
+        primary: "#E98C3D",
+        secondary: "#3B2F2F",
+        green: "#A2C8B4",
+        turquoise: "#9FD9D2",
+        background: "#F4EBD0",
+        foreground: "#3B2F2F",
       },
       fontFamily: {
         title: ["var(--font-comfortaa)", "sans-serif"],
