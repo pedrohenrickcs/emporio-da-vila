@@ -18,7 +18,7 @@ h2,
 h3,
 h4 {
     font-family: var(--font-title), cursive;
-    color: var(--cor-primary-color);
+    color: #ffffff;
 }
 
 a {
