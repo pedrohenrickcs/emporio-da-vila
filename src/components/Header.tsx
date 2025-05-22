@@ -1,9 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator } from '@radix-ui/react-menubar';
+import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem } from '@radix-ui/react-menubar';
 import Image from 'next/image';
-import { MenubarShortcut } from './ui/menubar';
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState<string | null>("produtos")
@@ -35,23 +34,15 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* <nav className="text-white text-sm bg-[#E98C3D]">
-                <ul className="flex justify-center space-x-8 py-2">
-                    <li className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">Início</li>
-                    <li className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">Sobre</li>
-                    <li className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">Produtos</li>
-                </ul>
-            </nav> */}
-
-            <Menubar className="flex justify-center bg-[#E98C3D] text-white text-sm py-2 space-x-8 rounded-none border-none">
+            <Menubar className="flex justify-center bg-[#dacfbc] text-[#3B2F2F] text-sm py-2 space-x-8 rounded-none border-none">
                 <MenubarMenu>
-                    <MenubarTrigger className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff] hover:border-0">
+                    <MenubarTrigger className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#dacfbc] hover:bg-[#ffffff] hover:border-0 focus-visible:outline-none focus-visible:ring-0">
                         Início
                     </MenubarTrigger>
                 </MenubarMenu>
 
                 <MenubarMenu>
-                    <MenubarTrigger className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff] hover:border-0">
+                    <MenubarTrigger className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#dacfbc] hover:bg-[#ffffff] hover:border-0 focus-visible:outline-none focus-visible:ring-0">
                         Sobre
                     </MenubarTrigger>
                 </MenubarMenu>
@@ -64,16 +55,13 @@ export default function Header() {
                                 setOpenMenu("produtos")
 
                             }
-                            console.log('openMenu', openMenu);
                         }}
                         onMouseLeave={() => {
-                            console.log('openMenusdsd', openMenu);
-
                             setOpenMenu('produtos')
                         }}
                     >
                         <MenubarTrigger
-                            className="hover:underline cursor-pointer bg-transparent m-2 text-white"
+                            className="hover:underline cursor-pointer bg-transparent m-2 text-[#3B2F2F] focus-visible:outline-none focus-visible:ring-0"
                             onClick={(e) => e.preventDefault()}
                         >
                             Produtos
@@ -82,15 +70,15 @@ export default function Header() {
                         {openMenu === "produtos" && (
                             <MenubarContent
                                 align="center"
-                                className="absolute left-1/2 -translate-x-1/2 mt-2 bg-[#E98C3D] text-white rounded shadow"
+                                className="absolute left-1/2 -translate-x-1/2 mt-2 bg-[#dacfbc] text-[#3B2F2F] rounded shadow"
                             >
-                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">
+                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#3B2F2F] hover:bg-[#ffffff] focus-visible:outline-none focus-visible:ring-0">
                                     Bebidas
                                 </MenubarItem>
-                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">
+                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#3B2F2F] hover:bg-[#ffffff] focus-visible:outline-none focus-visible:ring-0">
                                     Congelados
                                 </MenubarItem>
-                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#E98C3D] hover:bg-[#ffffff]">
+                                <MenubarItem className="cursor-pointer rounded p-2 hover:transition-colors hover:text-[#3B2F2F] hover:bg-[#ffffff] focus-visible:outline-none focus-visible:ring-0">
                                     Tabacaria
                                 </MenubarItem>
                             </MenubarContent>
