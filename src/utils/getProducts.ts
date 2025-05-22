@@ -1,5 +1,5 @@
-import { productsMock } from "@/data/products";
+import { products } from "@/data/products";
 
 export async function getProdutos() {
-  return productsMock;
+  return products;
 }
