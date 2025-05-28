@@ -26,12 +26,11 @@ export default function BaseSlider<T>({
     };
 
     return (
-        <section className={`w-full max-w-[1400px] mx-auto px-4 py-6 ${containerClassName}`}>
-            <div className="max-w-4xl mx-auto">
+        <section className={`max-w-screen-xl mx-auto px-4 py-6 ${containerClassName}`}>
+            <div className="mx-auto">
                 <h2 className="text-2xl font-medium text-center text-[#3B2F2F]">{title}</h2>
 
-
-                <div ref={sliderRef} className="flex overflow-x-auto gap-4 px-4 pb-2 overflow-x-auto scrollbar-hide scroll-smooth">
+                <div ref={sliderRef} className="flex justify-center overflow-x-auto gap-4 px-4 pb-2 overflow-x-auto scrollbar-hide scroll-smooth">
                     {items.map((item, index) => (
                         <div key={index} className="min-w-[150px] flex-shrink-0">
                             {renderItem(item, index)}

@@ -1,23 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem } from '@radix-ui/react-menubar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState<string | null>("produtos")
 
-    useEffect(() => {
-        console.log('openMenu', openMenu);
-
-    }, [])
-
     return (
         <header className="border-b shadow-sm">
             <div className="flex items-center justify-between px-4 py-3 bg-white">
-                <div className="flex-shrink-0">
+                <Link href="/" className="flex-shrink-0">
                     <Image src="/logo.webp" alt="Emporio da Vila" width={120} height={30} className="h-30" />
-                </div>
+                </Link>
 
                 <div className="flex-1 max-w-xl mx-4">
                     <input
