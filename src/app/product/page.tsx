@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { productPage } from "@/data/productPage";
+import { ProductDetailsAccordion } from "@/components/ProductDetailsAccordion";
+import FeaturedProducts from "@/components/FeaturedProductsSlider";
 
 export default function Product() {
     const hasDiscount = productPage.discountPrice < productPage.price;
@@ -57,6 +59,10 @@ export default function Product() {
                         </div>
                     </div>
                 </div>
+
+                <FeaturedProducts />
+                <ProductDetailsAccordion />
+
             </div>
         </>
     );

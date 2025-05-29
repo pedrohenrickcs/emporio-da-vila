@@ -1,6 +1,7 @@
 'use client';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 import { ReactNode, useRef } from 'react';
 
 interface BaseSliderProps<T> {
@@ -30,13 +31,22 @@ export default function BaseSlider<T>({
             <div className="mx-auto">
                 <h2 className="text-2xl font-medium text-center text-[#3B2F2F]">{title}</h2>
 
-                <div ref={sliderRef} className="flex justify-center overflow-x-auto gap-4 px-4 pb-2 overflow-x-auto scrollbar-hide scroll-smooth">
-                    {items.map((item, index) => (
-                        <div key={index} className="min-w-[150px] flex-shrink-0">
-                            {renderItem(item, index)}
-                        </div>
-                    ))}
-                </div>
+                <Link href="#" className="hover:no-underline">
+                    <div
+                        ref={sliderRef}
+                        className="flex justify-center overflow-x-auto gap-4 px-4 pb-2 scrollbar-hide scroll-smooth"
+                    >
+                        {items.map((item, index) => (
+                            <div
+                                key={index}
+                                className="min-w-[150px] flex-shrink-0 transform transition duration-300 hover:-translate-y-1"
+                            >
+                                {renderItem(item, index)}
+                            </div>
+                        ))}
+                    </div>
+                </Link>
+
 
                 <div className="space-x-2 hidden sm:flex justify-center mt-2">
                     <button

@@ -1,3 +1,4 @@
+import CategoriesSlider from "@/components/CategoriesSlider";
 import Categories from "@/components/CategoriesSlider";
 import FeaturedProducts from "@/components/FeaturedProductsSlider";
 import Header from "@/components/Header";
@@ -10,7 +11,7 @@ export default function Home() {
             <Hero />
             <Categories />
             <FeaturedProducts />
-            <FeaturedProducts />
+            <CategoriesSlider />
         </main>
     );
 }
