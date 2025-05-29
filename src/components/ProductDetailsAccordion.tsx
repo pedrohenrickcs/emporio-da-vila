@@ -12,7 +12,6 @@ import parse from "html-react-parser";
 export function ProductDetailsAccordion() {
     const { description, features, shipping, faq } = productAccordionData;
 
-
     return (
         <Accordion type="multiple" className="w-full md:col-span-2 max-w-6xl mx-auto">
             {description && (

@@ -18,7 +18,7 @@ export default function Header() {
                 <div className="flex-1 max-w-xl mx-4">
                     <input
                         type="text"
-                        placeholder="Buscar produtos..."
+                        placeholder="O que você está procurando?"
                         className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
                     />
                 </div>
@@ -82,7 +82,6 @@ export default function Header() {
                     </div>
                 </MenubarMenu>
             </Menubar>
-
         </header>
     );
 }
